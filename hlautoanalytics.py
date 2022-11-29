@@ -242,11 +242,11 @@ class autoanalytics(HydraHeadApp):
                         col1, col2,col3= st.columns(3)
                         with col1:  
                             if st.button('Read PDF tutorial',key='1'):            
-                                show_pdf('Automated_flow\DtaleInstructions-compressed.pdf')
+                                show_pdf('\Automated_flow\DtaleInstructions-compressed.pdf')
                         with col2:
                             st.button('Close PDF tutorial',key='2')                   
                         with col3:
-                            with open("Automated_flow\DtaleInstructions-compressed.pdf", "rb") as pdf_file:
+                            with open("\Automated_flow\DtaleInstructions-compressed.pdf", "rb") as pdf_file:
                                 PDFbyte = pdf_file.read()
                             st.download_button(label="Download PDF tutorial", key='3',
                                     data=PDFbyte,
