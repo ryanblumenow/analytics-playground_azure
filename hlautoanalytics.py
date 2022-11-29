@@ -251,12 +251,13 @@ class autoanalytics(HydraHeadApp):
                         with col2:
                             st.button('Close PDF tutorial',key='2')                   
                         with col3:
-                            with open("/DtaleInstructions-compressed.pdf", "rb") as pdf_file:
-                                PDFbyte = pdf_file.read()
-                            st.download_button(label="Download PDF tutorial", key='3',
-                                    data=PDFbyte,
-                                    file_name="EDA_Instructions.pdf",
-                                    mime='application/octet-stream')
+#                             with open("/DtaleInstructions-compressed.pdf", "rb") as pdf_file:
+#                                 PDFbyte = pdf_file.read()
+#                             st.download_button(label="Download PDF tutorial", key='3',
+#                                     data=PDFbyte,
+#                                     file_name="EDA_Instructions.pdf",
+#                                     mime='application/octet-stream')
+                               pass
 
                     datadescrip = st.expander("Description of data")
 
