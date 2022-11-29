@@ -242,7 +242,12 @@ class autoanalytics(HydraHeadApp):
                         col1, col2,col3= st.columns(3)
                         with col1:  
                             if st.button('Read PDF tutorial',key='1'):            
-                                show_pdf('/DtaleInstructions-compressed.pdf')
+#                                 show_pdf('/DtaleInstructions-compressed.pdf')
+                                pp_path = os.path.abspath(os.getcwd())
+                                folder = "gui/images/svg_images/"
+                                path = os.path.join(app_path, folder)
+                                file_name = os.path.normpath(os.path.join(path, 'DtaleInstructions-compressed.pdf'))
+                                show_pdf(file_name)
                         with col2:
                             st.button('Close PDF tutorial',key='2')                   
                         with col3:
