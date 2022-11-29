@@ -1,0 +1,36 @@
+FROM python:3.7-alpine
+# FROM python:3.7-slim-stretch
+# FROM python:3.7
+
+ENV APP_HOME /usr/src/app
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /usr/src/app
+
+COPY . /usr/src/app
+
+RUN apk add --update --no-cache python3 && ln -sf python3 /usr/src/app/python
+RUN python3 -m ensurepip
+RUN pip3 install --no-cache --upgrade pip setuptools
+# RUN pip install pip
+# # RUN pip install --upgrade pip
+# RUN python -m pip install --upgrade pip
+
+RUN pip install statsmodels --upgrade
+RUN pip install -r requirements.txt
+
+ENV PATH=$PATH:/usr/src/app
+
+EXPOSE 8501
+
+RUN mkdir ~/.streamlit
+RUN cp config.toml ~/.streamlit/config.toml
+RUN cp credentials.toml ~/.streamlit/credentials.toml
+
+# WORKDIR /usr/src/app
+
+ENTRYPOINT ["dtale-streamlit", "run", "abihydralitapp.py"]
+# ENTRYPOINT ["dtale-streamlit", "run", "/usr/src/app/abihydralitapp.py"]
+
+#ENTRYPOINT ["dtale-streamlit", "run"]
+#CMD ["abihydralitapp.py"]
