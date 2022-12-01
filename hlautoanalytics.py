@@ -293,31 +293,31 @@ class autoanalytics(HydraHeadApp):
 
                         from pandas_profiling import ProfileReport
     
-                        st.write(ProfileReport(df)
+#                         st.write(ProfileReport(df)
 
-#                 startup(data_id="1", data=df2.sample(15000)) # All records, no OHE
+                startup(data_id="1", data=df2.sample(n=None, frac=0.1)) # All records, no OHE
 
-#                 if get_instance("1") is None:
-#                     startup(data_id="1", data=df.sample(15000))
+                if get_instance("1") is None:
+                    startup(data_id="1", data=df.sample(15000))
 
-#                 d=get_instance("1")
+                d=get_instance("1")
 
-#                 # webbrowser.open_new_tab('http://localhost:8501/dtale/main/1') # New window/tab
-#                 # components.html("<iframe src='/dtale/main/1' />", width=1000, height=300, scrolling=True) # Element
-#                 html = f"""<iframe src="/dtale/main/1" height="1000" width="1400"></iframe>""" # Iframe
-#                 # html = "<a href='/dtale/main/1' target='_blank'>Dataframe 1</a>" # New tab link
+                # webbrowser.open_new_tab('http://localhost:8501/dtale/main/1') # New window/tab
+                # components.html("<iframe src='/dtale/main/1' />", width=1000, height=300, scrolling=True) # Element
+                html = f"""<iframe src="/dtale/main/1" height="1000" width="1400"></iframe>""" # Iframe
+                # html = "<a href='/dtale/main/1' target='_blank'>Dataframe 1</a>" # New tab link
 
-#                 st.markdown(html, unsafe_allow_html=True)
+                st.markdown(html, unsafe_allow_html=True)
 
-#                 # d = dtale.show(pd.DataFrame(df2.sample(1000)))
-#                 st.session_state.corr_img = d.get_corr_matrix()
-#                 st.session_state.corr_df = d.get_corr_matrix(as_df=True)
-#                 st.session_state.pps_img = d.get_pps_matrix()
-#                 st.session_state.pps_df = d.get_pps_matrix(as_df=True)
+                # d = dtale.show(pd.DataFrame(df2.sample(1000)))
+                st.session_state.corr_img = d.get_corr_matrix()
+                st.session_state.corr_df = d.get_corr_matrix(as_df=True)
+                st.session_state.pps_img = d.get_pps_matrix()
+                st.session_state.pps_df = d.get_pps_matrix(as_df=True)
 
-#                 print(st.session_state.corr_df)
+                print(st.session_state.corr_df)
                                  
-                st.write(show(df))
+#                 st.write(show(df))
 
                 checkbtn = st.button("Validate data")
 
