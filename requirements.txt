@@ -11,7 +11,7 @@ tk
 ppscore
 st-click-detector
 streamlit
-dtale[streamlit]
+dtale[streamlit]==2.8.1
 streamlit-option-menu
 streamlit-extras
 streamlit-quill
