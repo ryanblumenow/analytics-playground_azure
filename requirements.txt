@@ -18,3 +18,4 @@ streamlit-quill
 streamlit-pandas-profiling
 python-dotenv
 watchdog
+pandasgui
