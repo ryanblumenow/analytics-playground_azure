@@ -828,7 +828,7 @@ class autoanalytics(HydraHeadApp):
                 # Perform K-means clustering for consumer segmentation
 
                 # Size of the data set after removing NaN
-                print(df2.shape)
+#                 print(df2.shape)
                 # Explore type of data and feature names
                 #print(df2.sample(5))
 
