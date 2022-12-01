@@ -10,8 +10,8 @@ bioinfokit
 tk
 ppscore
 st-click-detector
-streamlit
-dtale[streamlit]==2.8.1
+streamlit==1.11.1
+dtale[streamlit]
 streamlit-option-menu
 streamlit-extras
 streamlit-quill
