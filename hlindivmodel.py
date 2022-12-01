@@ -277,7 +277,7 @@ class indivmodels(HydraHeadApp):
             with col3:
                 pass
 
-            st.button("AutoML - choose the best fit model for your analysis using FLAML")
+#             st.button("AutoML - choose the best fit model for your analysis using FLAML")
 
         with dataset:
             # components.html('''<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
