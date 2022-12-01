@@ -79,6 +79,7 @@ from streamlit_quill import st_quill
 from streamlit_pandas_profiling import st_profile_report
 import dataingestion
 from streamlit_option_menu import option_menu
+from pandasgui import show
 
 #add an import to Hydralit
 from hydralit import HydraHeadApp
@@ -315,8 +316,6 @@ class autoanalytics(HydraHeadApp):
 #                 st.session_state.pps_df = d.get_pps_matrix(as_df=True)
 
 #                 print(st.session_state.corr_df)
-                                 
-                from pandasgui import show
                                  
                 st.write(show(df)
 
