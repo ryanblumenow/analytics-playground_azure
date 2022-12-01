@@ -14,9 +14,12 @@ connection_string = "DefaultEndpointsProtocol=https;AccountName=microservicessto
 def readdata():
     # Read data
     try:
-        branddf = read_data_from_blob(blob_name='brandname_encoding.csv',connection_string=connection_string)
-        df = read_data_from_blob(blob_name='allrecordsohe.csv',connection_string=connection_string)
-        df2 = read_data_from_blob(blob_name='allrecords.csv',connection_string=connection_string)
+#         branddf = read_data_from_blob(blob_name='brandname_encoding.csv',connection_string=connection_string)
+#         df = read_data_from_blob(blob_name='allrecordsohe.csv',connection_string=connection_string)
+#         df2 = read_data_from_blob(blob_name='allrecords.csv',connection_string=connection_string)
+        df = pd.read_csv('allrecordsohe.csv', low_memory=False)
+        df2 = pd.read_csv('allrecords.csv', low_memory=False)
+        branddf = pd.read_csv('Brandname encoding.csv', low_memory=False)
     except BaseException:
         print('Blob download failed')
     # df = pd.read_csv('allrecordsohe.csv', low_memory=False)
