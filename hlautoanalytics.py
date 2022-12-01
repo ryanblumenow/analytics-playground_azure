@@ -317,7 +317,7 @@ class autoanalytics(HydraHeadApp):
 
 #                 print(st.session_state.corr_df)
                                  
-                st.write(show(df)
+                st.write(show(df))
 
                 checkbtn = st.button("Validate data")
 
