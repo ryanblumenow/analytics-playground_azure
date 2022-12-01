@@ -316,7 +316,6 @@ class autoanalytics(HydraHeadApp):
 
 #                 print(st.session_state.corr_df)
                                  
-                import pandas as pd
                 from pandasgui import show
                                  
                 st.write(show(df)
