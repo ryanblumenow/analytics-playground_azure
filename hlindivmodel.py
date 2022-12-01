@@ -317,7 +317,7 @@ class indivmodels(HydraHeadApp):
                     st.write(df.describe(exclude=object))
 
                 if get_instance("1") is None:
-                    startup(data_id="1", data=df)
+                    startup(data_id="1", data=df.sample(n==None, frac=0.1))
 
                 d=get_instance("1")
 
